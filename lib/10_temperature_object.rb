@@ -36,12 +36,13 @@ class Temperature
 end
 
 class Celsius < Temperature
-  attr_accessor :temp
-
   def initialize(temp)
-    @temp = {:c => temp}
+    super @temp = {:c => temp}
   end
 end
 
 class Fahrenheit < Temperature
+  def initialize(temp)
+    super @temp = {:f => temp}
+  end
 end
